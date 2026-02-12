@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/dyros21/260126_tw_ws/build/any_node_example",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"any_node_example\\\" -Dany_node_example_EXPORTS -I/home/dyros21/260126_tw_ws/src/any_node/any_node_example/include -I/home/dyros21/260126_tw_ws/devel/.private/message_logger/include -I/home/dyros21/260126_tw_ws/src/message_logger/include -I/home/dyros21/260126_tw_ws/src/any_node/any_worker/include -I/home/dyros21/260126_tw_ws/src/any_node/param_io/include -I/home/dyros21/260126_tw_ws/src/any_node/signal_handler/include -I/home/dyros21/260126_tw_ws/src/any_node/any_node/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3  -fPIC   -std=gnu++17 -o CMakeFiles/any_node_example.dir/src/ExampleNode.cpp.o -c /home/dyros21/260126_tw_ws/src/any_node/any_node_example/src/ExampleNode.cpp",
+  "file": "/home/dyros21/260126_tw_ws/src/any_node/any_node_example/src/ExampleNode.cpp"
+},
+{
+  "directory": "/home/dyros21/260126_tw_ws/build/any_node_example",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"any_node_example\\\" -I/home/dyros21/260126_tw_ws/src/any_node/any_node_example/include -I/home/dyros21/260126_tw_ws/devel/.private/message_logger/include -I/home/dyros21/260126_tw_ws/src/message_logger/include -I/home/dyros21/260126_tw_ws/src/any_node/any_worker/include -I/home/dyros21/260126_tw_ws/src/any_node/param_io/include -I/home/dyros21/260126_tw_ws/src/any_node/signal_handler/include -I/home/dyros21/260126_tw_ws/src/any_node/any_node/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3    -std=gnu++17 -o CMakeFiles/any_node_example_node.dir/src/any_node_example_node.cpp.o -c /home/dyros21/260126_tw_ws/src/any_node/any_node_example/src/any_node_example_node.cpp",
+  "file": "/home/dyros21/260126_tw_ws/src/any_node/any_node_example/src/any_node_example_node.cpp"
+}
+]

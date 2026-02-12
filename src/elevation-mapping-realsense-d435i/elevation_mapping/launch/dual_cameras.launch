@@ -1,0 +1,37 @@
+<launch>
+  <arg name="serial_no_cam1" default="313522071839"/>
+  <arg name="serial_no_cam2" default="337122072996"/>
+
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <arg name="camera" value="cam_1"/>
+    <arg name="serial_no" value="$(arg serial_no_cam1)"/>
+    <arg name="tf_prefix" value="cam_1"/>
+    
+    <arg name="align_depth" value="true"/>
+    <arg name="filters" value="pointcloud,decimation"/>
+    
+    <arg name="depth_width" value="640"/>
+    <arg name="depth_height" value="480"/>
+    <arg name="depth_fps" value="30"/>
+    <arg name="color_width" value="640"/>
+    <arg name="color_height" value="480"/>
+    <arg name="color_fps" value="30"/>
+  </include>
+
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <arg name="camera" value="cam_2"/>
+    <arg name="serial_no" value="$(arg serial_no_cam2)"/>
+    <arg name="tf_prefix" value="cam_2"/>
+    
+    <arg name="align_depth" value="true"/>
+    <arg name="filters" value="pointcloud,decimation"/>
+    <arg name="initial_reset" value="true"/>
+
+    <arg name="depth_width" value="640"/>
+    <arg name="depth_height" value="480"/>
+    <arg name="depth_fps" value="30"/>
+    <arg name="color_width" value="640"/>
+    <arg name="color_height" value="480"/>
+    <arg name="color_fps" value="30"/>
+  </include>
+</launch>

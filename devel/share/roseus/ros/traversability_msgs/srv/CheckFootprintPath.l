@@ -1,0 +1,1 @@
+/home/dyros21/260126_tw_ws/devel/.private/traversability_msgs/share/roseus/ros/traversability_msgs/srv/CheckFootprintPath.l

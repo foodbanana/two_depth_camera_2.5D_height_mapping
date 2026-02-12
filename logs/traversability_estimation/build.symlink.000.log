@@ -1,0 +1,5 @@
+Symlinking /home/dyros21/260126_tw_ws/devel/lib/libtraversability_estimation.so
+Symlinking /home/dyros21/260126_tw_ws/devel/lib/traversability_estimation/traversability_estimation_node
+Symlinking /home/dyros21/260126_tw_ws/devel/lib/pkgconfig/traversability_estimation.pc
+Symlinking /home/dyros21/260126_tw_ws/devel/share/traversability_estimation/cmake/traversability_estimationConfig-version.cmake
+Symlinking /home/dyros21/260126_tw_ws/devel/share/traversability_estimation/cmake/traversability_estimationConfig.cmake

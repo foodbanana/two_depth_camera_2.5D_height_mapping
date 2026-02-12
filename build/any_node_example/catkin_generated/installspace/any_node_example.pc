@@ -1,0 +1,8 @@
+prefix=/home/dyros21/260126_tw_ws/install
+
+Name: any_node_example
+Description: Description of any_node_example
+Version: 0.5.24
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lany_node_example
+Requires: any_node std_msgs

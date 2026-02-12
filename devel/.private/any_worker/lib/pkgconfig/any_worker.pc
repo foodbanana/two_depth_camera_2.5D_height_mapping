@@ -1,0 +1,8 @@
+prefix=/home/dyros21/260126_tw_ws/devel/.private/any_worker
+
+Name: any_worker
+Description: Description of any_worker
+Version: 0.5.24
+Cflags: -I/home/dyros21/260126_tw_ws/src/any_node/any_worker/include
+Libs: -L${prefix}/lib -lany_worker -lpthread
+Requires: message_logger

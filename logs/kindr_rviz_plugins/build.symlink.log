@@ -1,0 +1,4 @@
+Symlinking /home/dyros21/260126_tw_ws/devel/lib/libkindr_rviz_plugins.so
+Symlinking /home/dyros21/260126_tw_ws/devel/lib/pkgconfig/kindr_rviz_plugins.pc
+Symlinking /home/dyros21/260126_tw_ws/devel/share/kindr_rviz_plugins/cmake/kindr_rviz_pluginsConfig-version.cmake
+Symlinking /home/dyros21/260126_tw_ws/devel/share/kindr_rviz_plugins/cmake/kindr_rviz_pluginsConfig.cmake

@@ -1,0 +1,1 @@
+/home/dyros21/260126_tw_ws/devel/.private/kindr_rviz_plugins/share/kindr_rviz_plugins/cmake/kindr_rviz_pluginsConfig-version.cmake

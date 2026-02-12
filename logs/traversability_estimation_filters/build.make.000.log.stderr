@@ -1,0 +1,15 @@
+In file included from [01m[K/home/dyros21/260126_tw_ws/src/elevation-mapping-realsense-d435i/traversability_estimation/traversability_estimation_filters/include/filters/StepFilter.hpp:12[m[K,
+                 from [01m[K/home/dyros21/260126_tw_ws/src/elevation-mapping-realsense-d435i/traversability_estimation/traversability_estimation_filters/src/StepFilter.cpp:9[m[K:
+[01m[K/opt/ros/noetic/include/filters/filter_base.h:40:2:[m[K [01;35m[Kwarning: [m[K#warning Including header <filters/filter_base.h> is deprecated, include <filters/filter_base.hpp> instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   40 | #[01;35m[Kwarning[m[K Including header <filters/filter_base.h> is deprecated, \
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/dyros21/260126_tw_ws/src/elevation-mapping-realsense-d435i/traversability_estimation/traversability_estimation_filters/include/filters/SlopeFilter.hpp:12[m[K,
+                 from [01m[K/home/dyros21/260126_tw_ws/src/elevation-mapping-realsense-d435i/traversability_estimation/traversability_estimation_filters/src/SlopeFilter.cpp:9[m[K:
+[01m[K/opt/ros/noetic/include/filters/filter_base.h:40:2:[m[K [01;35m[Kwarning: [m[K#warning Including header <filters/filter_base.h> is deprecated, include <filters/filter_base.hpp> instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   40 | #[01;35m[Kwarning[m[K Including header <filters/filter_base.h> is deprecated, \
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/home/dyros21/260126_tw_ws/src/elevation-mapping-realsense-d435i/traversability_estimation/traversability_estimation_filters/include/filters/RoughnessFilter.hpp:12[m[K,
+                 from [01m[K/home/dyros21/260126_tw_ws/src/elevation-mapping-realsense-d435i/traversability_estimation/traversability_estimation_filters/src/RoughnessFilter.cpp:9[m[K:
+[01m[K/opt/ros/noetic/include/filters/filter_base.h:40:2:[m[K [01;35m[Kwarning: [m[K#warning Including header <filters/filter_base.h> is deprecated, include <filters/filter_base.hpp> instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   40 | #[01;35m[Kwarning[m[K Including header <filters/filter_base.h> is deprecated, \
+      |  [01;35m[K^~~~~~~[m[K

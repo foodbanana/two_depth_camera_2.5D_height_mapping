@@ -1,0 +1,7 @@
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="kindr_rviz_plugins"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-DQT_NO_KEYWORDS
+-o
+/home/dyros21/260126_tw_ws/build/kindr_rviz_plugins/include/kindr_rviz_plugins/moc_VectorAtPositionDisplay.cpp
+/home/dyros21/260126_tw_ws/src/kindr_ros/kindr_rviz_plugins/include/kindr_rviz_plugins/VectorAtPositionDisplay.hpp

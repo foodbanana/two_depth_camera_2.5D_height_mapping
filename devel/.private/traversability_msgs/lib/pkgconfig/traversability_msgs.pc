@@ -1,0 +1,8 @@
+prefix=/home/dyros21/260126_tw_ws/devel/.private/traversability_msgs
+
+Name: traversability_msgs
+Description: Description of traversability_msgs
+Version: 0.4.0
+Cflags: -I/home/dyros21/260126_tw_ws/devel/.private/traversability_msgs/include
+Libs: -L${prefix}/lib 
+Requires: 

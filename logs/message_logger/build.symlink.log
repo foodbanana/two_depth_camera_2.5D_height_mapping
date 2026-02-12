@@ -1,0 +1,6 @@
+Symlinking /home/dyros21/260126_tw_ws/devel/lib/libmessage_logger.so
+Symlinking /home/dyros21/260126_tw_ws/devel/lib/message_logger/demo
+Symlinking /home/dyros21/260126_tw_ws/devel/lib/pkgconfig/message_logger.pc
+Symlinking /home/dyros21/260126_tw_ws/devel/share/message_logger/cmake/message_loggerConfig.cmake
+Symlinking /home/dyros21/260126_tw_ws/devel/share/message_logger/cmake/message_loggerConfig-version.cmake
+Symlinking /home/dyros21/260126_tw_ws/devel/include/message_logger/log/log_messages_backend_config.hpp

@@ -1,0 +1,8 @@
+prefix=/home/dyros21/260126_tw_ws/devel/.private/param_io
+
+Name: param_io
+Description: Description of param_io
+Version: 0.5.24
+Cflags: -I/home/dyros21/260126_tw_ws/src/any_node/param_io/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp std_msgs

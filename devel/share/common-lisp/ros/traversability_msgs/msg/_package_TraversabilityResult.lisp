@@ -1,0 +1,1 @@
+/home/dyros21/260126_tw_ws/devel/.private/traversability_msgs/share/common-lisp/ros/traversability_msgs/msg/_package_TraversabilityResult.lisp

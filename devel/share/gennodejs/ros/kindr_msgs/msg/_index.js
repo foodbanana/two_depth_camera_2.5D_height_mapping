@@ -1,0 +1,1 @@
+/home/dyros21/260126_tw_ws/devel/.private/kindr_msgs/share/gennodejs/ros/kindr_msgs/msg/_index.js

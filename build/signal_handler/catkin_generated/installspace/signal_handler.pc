@@ -1,0 +1,8 @@
+prefix=/home/dyros21/260126_tw_ws/install
+
+Name: signal_handler
+Description: Description of signal_handler
+Version: 0.5.24
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lsignal_handler
+Requires: 

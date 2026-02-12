@@ -1,0 +1,1 @@
+/home/dyros21/260126_tw_ws/devel/.private/kindr_msgs/share/roseus/ros/kindr_msgs/msg/VectorAtPosition.l

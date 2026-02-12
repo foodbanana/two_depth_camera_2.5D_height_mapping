@@ -1,0 +1,1 @@
+/home/dyros21/260126_tw_ws/devel/.private/multi_dof_joint_trajectory_rviz_plugins/share/multi_dof_joint_trajectory_rviz_plugins/cmake/multi_dof_joint_trajectory_rviz_pluginsConfig.cmake

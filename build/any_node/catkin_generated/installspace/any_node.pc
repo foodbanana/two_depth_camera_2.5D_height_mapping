@@ -1,0 +1,8 @@
+prefix=/home/dyros21/260126_tw_ws/install
+
+Name: any_node
+Description: Description of any_node
+Version: 0.6.20
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lany_node -lpthread
+Requires: any_worker message_logger param_io roscpp signal_handler

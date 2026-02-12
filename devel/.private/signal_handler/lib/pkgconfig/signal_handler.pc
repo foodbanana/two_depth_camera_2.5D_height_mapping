@@ -1,0 +1,8 @@
+prefix=/home/dyros21/260126_tw_ws/devel/.private/signal_handler
+
+Name: signal_handler
+Description: Description of signal_handler
+Version: 0.5.24
+Cflags: -I/home/dyros21/260126_tw_ws/src/any_node/signal_handler/include
+Libs: -L${prefix}/lib -lsignal_handler
+Requires: 

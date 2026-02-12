@@ -1,0 +1,39 @@
+<launch>
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <arg name="camera" value="cam_1"/>
+    <arg name="serial_no" value="313522071839"/>
+    <arg name="filters" value="pointcloud"/>
+    <arg name="initial_reset" value="true"/> <!-- initial reset 관련-->
+    <arg name="depth_width" value="640"/>
+    <arg name="depth_height" value="480"/>
+    <arg name="depth_fps" value="15"/> <!-- fps 값들을 일단은 낮춤 나중에 서서히 올리기-->
+    <arg name="color_width" value="640"/>
+    <arg name="color_height" value="480"/>
+    <arg name="color_fps" value="15"/> <!-- fps 값들을 일단은 낮춤 나중에 서서히 올리기-->
+  </include>
+
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <arg name="camera" value="cam_2"/>
+    <arg name="serial_no" value="337122072996"/>
+    <arg name="filters" value="pointcloud"/>
+    <arg name="initial_reset" value="true"/>
+    <arg name="depth_width" value="640"/>
+    <arg name="depth_height" value="480"/>
+    <arg name="depth_fps" value="15"/> <!-- fps 값들을 일단은 낮춤 나중에 서서히 올리기-->
+    <arg name="color_width" value="640"/>
+    <arg name="color_height" value="480"/>
+    <arg name="color_fps" value="15"/> <!-- fps 값들을 일단은 낮춤 나중에 서서히 올리기-->
+  </include>
+
+  <node pkg="tf" type="static_transform_publisher" name="base_to_cam1" 
+        args="0 0 0.5 0 0 0 base_link cam_1_link 100" /> <!-- cam_1을 캘리브레이션 하고 그 값을 여기다가 넣기 x y z yaw pitch roll parent child period_ms -->
+
+  <node pkg="tf" type="static_transform_publisher" name="base_to_cam2" 
+        args="0 0 0 1.05 0 0 base_link cam_2_link 100" /> <!-- cam_2를 캘리브레이션 하고 그 값을 여기다가 넣기-->
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find realsense2_camera)/rviz/pointcloud.rviz" />
+</launch>
+
+
+
+<!--  주석-->

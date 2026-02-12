@@ -1,0 +1,74 @@
+input_sources:
+  input_front:
+    type: pointcloud
+    topic: /cam_1/depth/color/points_downsampled   #원래는 points라고만 했는게 그게 잘못된 것 같다
+    queue_size: 1
+    publish_on_update: true  # 이거 false로 하면 지도 갱신을 할 때 정해진 시간 후에 모아서 지도를 갱신한다. 이러면 CPU부하가 덜하다
+    sensor_processor:
+      ignore_points_above: .inf
+      ignore_points_below: -.inf
+      type: structured_light   # 잘은 모르겠지만 구조광 방식 센서에 맞는 노이즈 모델이라고 한다
+      # Modeling Realsense D435 Sensor Noise for Improved 3D Reconstruction and Tracking.
+      cutoff_min_depth: 0.2  #0.2m(20cm) 이내의 물체는 무시
+      cutoff_max_depth: 3.25 #3.25m 밖의 물체는 무시
+      normal_factor_a: 0.000611 #거리와 각도에 따른 센서 오차 확률 모델 ---> 이게 논문에서 제안한 모델의 계수들이다. 이것이 정확해야 지도가 깔끔하게 나온다
+      normal_factor_b:  0.003587
+      normal_factor_c: 0.3515
+      normal_factor_d: 0
+      normal_factor_e: 1
+      lateral_factor: 0.01576
+  
+  input_rear:   # 원래 input_rear은 있지도 않았다... 내가 카메라가 두개가 되면서 추가한 것
+    type: pointcloud
+    topic: /cam_2/depth/color/points_downsampled
+    queue_size: 1
+    publish_on_update: true
+    sensor_processor:
+      type: structured_light
+      cutoff_min_depth: 0.2
+      cutoff_max_depth: 3.0
+      # Cam 1과 동일한 노이즈 모델 사용 (같은 D435이므로)
+      normal_factor_a: 0.000611
+      normal_factor_b: 0.003587
+      normal_factor_c: 0.3515
+      normal_factor_d: 0
+      normal_factor_e: 1
+      lateral_factor: 0.01576
+
+
+
+
+
+
+
+# point_cloud_topic: "/points_downsampled" 이 줄은 어차피 무시되서 그냥 주석처리 함
+map_frame_id: "rtabmap/odom"       # frame id 는 잘 맞춘 것 같다 launch/rtabmap.launch에서도 rtabmap/odom으로 설정했음
+robot_base_frame_id: "base_link"   # 원래는 "camera_link"  
+# robot_pose_with_covariance_topic: "/rtabmap/localization_pose"   #로봇이 왔던 곳을 재인식 할 떄 발행되는 토픽: /rtabmap/localization_pose  #이것이 내 생각엔 에러를 일으키는 코드  #전에는 /pose였다 # 이것을 주석 처리했는데 오류가 나는 경우 pose_translator 같은 별도 노드를 써서 /rtabmap/odom을 PoseWithCovarianceStamped형식으로 변환해서 넣어줘야 한다
+robot_pose_cache_size: 200 # 기억하는 로봇 위치 개수(버퍼 크기) - 200개면 10초(20HZ) 기억 -- 이거 한 번 줄여볼까? 고민된다
+
+#로봇이 이동하면 지도도 따라 움직이게 만드는 코드 - base_link를 따라간다
+track_point_frame_id: "base_link" #base_link를 따라 지도의 중앙이 움작안다.
+track_point_x: 0.0
+track_point_y: 0.0
+track_point_z: 0.0
+
+
+# Map.
+length_in_x:                                4.0 # 지도의 가로 크기 (4미터) 2미터?
+length_in_y:                                4.0 # 지도의 세로 크기 (4미터) 2미터?
+position_x:                                 0.0
+position_y:                                 0.0 
+resolution:                                 0.09  # 지도 한칸 크기 -> 원래는 0.07 이었다
+min_variance:                               0.0001
+max_variance:                               0.05
+mahalanobis_distance_threshold:             1.5
+multi_height_noise:                         0.0001
+surface_normal_positive_axis:               z
+fused_map_publishing_rate:                  15   # 지도 업데이트 속도  (HZ) 이거 높이면 더 빠르게 내부적으로 발행
+enable_visibility_cleanup:                  true  #false # true로 해야 장애물이 없어졌을 때 사라진다
+visibility_cleanup_rate:                    0.5 # 2초에 한 번씩 장애물 있는지 업데이트 하고 없으면 제거 #1 #1초에 한 번씩 지도 청소(장애물 없으면 벽 제거)
+scanning_duration:                          0.5   # 0.5초 동안 쌓인 데이터를 이용해서 지도 갱신
+
+
+# heigt map의 갱신 속도에 영향을 주는 파라미터들은 fused_map_publishing_rate, resolution 등이다

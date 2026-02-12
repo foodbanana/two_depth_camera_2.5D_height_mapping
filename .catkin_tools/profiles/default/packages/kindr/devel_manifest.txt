@@ -1,0 +1,4 @@
+kindr
+/home/dyros21/260126_tw_ws/devel/.private/kindr/lib/pkgconfig/kindr.pc /home/dyros21/260126_tw_ws/devel/lib/pkgconfig/kindr.pc
+/home/dyros21/260126_tw_ws/devel/.private/kindr/share/kindr/cmake/kindrConfig-version.cmake /home/dyros21/260126_tw_ws/devel/share/kindr/cmake/kindrConfig-version.cmake
+/home/dyros21/260126_tw_ws/devel/.private/kindr/share/kindr/cmake/kindrConfig.cmake /home/dyros21/260126_tw_ws/devel/share/kindr/cmake/kindrConfig.cmake
