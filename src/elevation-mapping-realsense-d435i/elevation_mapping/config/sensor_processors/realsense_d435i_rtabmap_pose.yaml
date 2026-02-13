@@ -55,18 +55,18 @@ track_point_z: 0.0
 
 
 # Map.
-length_in_x:                                4.0 # 지도의 가로 크기 (4미터) 2미터?
-length_in_y:                                4.0 # 지도의 세로 크기 (4미터) 2미터?
+length_in_x:                                6.0 # 지도의 가로 크기 (4미터) 2미터?
+length_in_y:                                6.0 # 지도의 세로 크기 (4미터) 2미터?
 position_x:                                 0.0
 position_y:                                 0.0 
-resolution:                                 0.09  # 지도 한칸 크기 -> 원래는 0.07 이었다
+resolution:                                 0.09 # 지도 한칸 크기 -> 원래는 0.07 이었다
 min_variance:                               0.0001
 max_variance:                               0.05
 mahalanobis_distance_threshold:             1.5
 multi_height_noise:                         0.0001
 surface_normal_positive_axis:               z
 fused_map_publishing_rate:                  15   # 지도 업데이트 속도  (HZ) 이거 높이면 더 빠르게 내부적으로 발행
-enable_visibility_cleanup:                  true  #false # true로 해야 장애물이 없어졌을 때 사라진다
+enable_visibility_cleanup:                  true  #false # true로 해야 장애물이 없어졌을 때 사라진다 #false로 하면 빨라지기는 한다
 visibility_cleanup_rate:                    0.5 # 2초에 한 번씩 장애물 있는지 업데이트 하고 없으면 제거 #1 #1초에 한 번씩 지도 청소(장애물 없으면 벽 제거)
 scanning_duration:                          0.5   # 0.5초 동안 쌓인 데이터를 이용해서 지도 갱신
 
