@@ -45,8 +45,7 @@ input_sources:
 map_frame_id: "rtabmap/odom"       # frame id 는 잘 맞춘 것 같다 launch/rtabmap.launch에서도 rtabmap/odom으로 설정했음
 robot_base_frame_id: "base_link"   # 원래는 "camera_link"  
 # robot_pose_with_covariance_topic: "/rtabmap/localization_pose"   #로봇이 왔던 곳을 재인식 할 떄 발행되는 토픽: /rtabmap/localization_pose  #이것이 내 생각엔 에러를 일으키는 코드  #전에는 /pose였다 # 이것을 주석 처리했는데 오류가 나는 경우 pose_translator 같은 별도 노드를 써서 /rtabmap/odom을 PoseWithCovarianceStamped형식으로 변환해서 넣어줘야 한다
-robot_pose_cache_size: 200 # 기억하는 로봇 위치 개수(버퍼 크기) - 200개면 10초(20HZ) 기억 -- 이거 한 번 줄여볼까? 고민된다
-
+robot_pose_cache_size: 200 # 기억하는 로봇 위치 개수(버퍼 크기) - 200개면 10초(20HZ) 기억 
 #로봇이 이동하면 지도도 따라 움직이게 만드는 코드 - base_link를 따라간다
 track_point_frame_id: "base_link" #base_link를 따라 지도의 중앙이 움작안다.
 track_point_x: 0.0
@@ -55,8 +54,9 @@ track_point_z: 0.0
 
 
 # Map.
-length_in_x:                                6.0 # 지도의 가로 크기 (4미터) 2미터?
-length_in_y:                                6.0 # 지도의 세로 크기 (4미터) 2미터?
+length_in_x:                                7.0 # 지도의 가로 크기 (4미터) 2미터?
+length_in_y:                                7.0 # 지도의 세로 크기 (4미터) 2미터?
+sensor_cutoff_max_depth:                    4.5 # length in x,y 의 절반. 이것보다 먼 거리는 고려하지 않음
 position_x:                                 0.0
 position_y:                                 0.0 
 resolution:                                 0.09 # 지도 한칸 크기 -> 원래는 0.07 이었다
@@ -69,6 +69,7 @@ fused_map_publishing_rate:                  15   # 지도 업데이트 속도  (
 enable_visibility_cleanup:                  true  #false # true로 해야 장애물이 없어졌을 때 사라진다 #false로 하면 빨라지기는 한다
 visibility_cleanup_rate:                    0.5 # 2초에 한 번씩 장애물 있는지 업데이트 하고 없으면 제거 #1 #1초에 한 번씩 지도 청소(장애물 없으면 벽 제거)
 scanning_duration:                          0.5   # 0.5초 동안 쌓인 데이터를 이용해서 지도 갱신
-
+num_callback_threads:                        4     #CPU 4코어 이용, 멀티코어 활용
+postprocessor_num_threads:                   4      #지도 후처리 쓰레드 4개 사용
 
 # heigt map의 갱신 속도에 영향을 주는 파라미터들은 fused_map_publishing_rate, resolution 등이다
