@@ -45,7 +45,7 @@ deactivate pose data, allowing the node to be launched with the camera motionles
 
     ```bash
     cd ~/<workspace이름>/src
-    git clone https://github.com/foodbanana/one_depth_camera_2.5D_height_mapping.git
+    git clone https://github.com/foodbanana/two_depth_camera_2.5D_height_mapping.git
     ```
 
 2. 패키지 빌드
@@ -58,14 +58,22 @@ deactivate pose data, allowing the node to be launched with the camera motionles
     ```
 
 ### step2. 코드 실행
-1. rtabmap 이용해서 카메라가 움직인다고 설정 시 (메인코드)
+1.카메라 2개 실행
     ```bash
-    roslaunch elevation_mapping elevationMap_realsense_d435i.launch pose:=true traversability:=false
+    roslaunch elevation_mapping dual_cameras.launch
+
     ```
 
-2. rtabmap 이용해서 카메라가 움직임이 없고 base_link만 움직인다고 설정 시
+2. height mapping 및 SLAM 진행
     ```bash
-    roslaunch elevation_mapping elevationMap_realsense_d435i.launch pose:=false traversability:=false
+    roslaunch elevation_mapping elevationMap_realsense_d435i.launch pose:=true
+
+    ```
+
+3. height map 잘 뽑아내는지 검증
+    ```bash
+    roslaunch elevation_mapping elevationMap_realsense_d435i.launch pose:=true
+
     ```
 
 
@@ -74,10 +82,11 @@ deactivate pose data, allowing the node to be launched with the camera motionles
 ### step3. 세부 설정
 1. map 크기 및 resolution
 <작업폴더경로>/src/elevation-mapping-realsense-d435i/elevation_mapping/config/sensor_processors/realsense_d435i_rtabmap_pose.yaml
-를 들어가면 line34부터 관련 값들이 존재한다
+를 들어가면 line34부터 관련 값들이 존재합니다
 
 
-
+### step4. 한계
+연산량이 많아 상당히 느리게 map이 업데이트 되며 이것을 개선중에 있습니다.
 
 
 
