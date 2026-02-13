@@ -53,9 +53,9 @@ track_point_y: 0.0
 track_point_z: 0.0
 
 
-# Map.
-length_in_x:                                7.0 # 지도의 가로 크기 (4미터) 2미터?
-length_in_y:                                7.0 # 지도의 세로 크기 (4미터) 2미터?
+# Map
+length_in_x:                                6.0 # 지도의 가로 크기 (4미터) 2미터?
+length_in_y:                                6.0 # 지도의 세로 크기 (4미터) 2미터?
 sensor_cutoff_max_depth:                    4.5 # length in x,y 의 절반. 이것보다 먼 거리는 고려하지 않음
 position_x:                                 0.0
 position_y:                                 0.0 
@@ -69,7 +69,7 @@ fused_map_publishing_rate:                  15   # 지도 업데이트 속도  (
 enable_visibility_cleanup:                  true  #false # true로 해야 장애물이 없어졌을 때 사라진다 #false로 하면 빨라지기는 한다
 visibility_cleanup_rate:                    0.5 # 2초에 한 번씩 장애물 있는지 업데이트 하고 없으면 제거 #1 #1초에 한 번씩 지도 청소(장애물 없으면 벽 제거)
 scanning_duration:                          0.5   # 0.5초 동안 쌓인 데이터를 이용해서 지도 갱신
-num_callback_threads:                        4     #CPU 4코어 이용, 멀티코어 활용
-postprocessor_num_threads:                   4      #지도 후처리 쓰레드 4개 사용
+num_callback_threads:                        5     #CPU 4코어 이용, 멀티코어 활용
+postprocessor_num_threads:                   2     #지도 후처리 쓰레드 4개 사용
 
 # heigt map의 갱신 속도에 영향을 주는 파라미터들은 fused_map_publishing_rate, resolution 등이다
