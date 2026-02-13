@@ -72,7 +72,7 @@ deactivate pose data, allowing the node to be launched with the camera motionles
 
 3. height map 잘 뽑아내는지 검증
     ```bash
-    roslaunch elevation_mapping elevationMap_realsense_d435i.launch pose:=true
+    rostopic echo /rtabmap/odom
 
     ```
 
