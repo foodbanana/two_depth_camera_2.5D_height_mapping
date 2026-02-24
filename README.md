@@ -20,12 +20,27 @@ deactivate pose data, allowing the node to be launched with the camera motionles
 - [ROS noetic](http://wiki.ros.org/ROS/Installation)
 - [Realsense](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy) (ROS Wrapper for Intel® RealSense™ Devices)
 - [Grid Map](https://github.com/anybotics/grid_map) (grid map library for mobile robots)
-- [kindr](http://github.com/anybotics/kindr) (kinematics and dynamics library for robotics),
-- [kindr_ros](https://github.com/anybotics/kindr_ros) (ROS wrapper for kindr),
-- [Point Cloud Library (PCL)](http://pointclouds.org/) (point cloud processing),
+- [Grid Map rviz plugin](https://github.com/ANYbotics/grid_map) (gridmap을 뽑아내고 rviz에 최종 출력하는 라이브러리)
+간혹 위의 grid map에서 rviz_plugin이 누락되는 경우가 있습니다. 이런 경우 rviz_plugin을 직접 다운 받거나 또는 아래의 apt install을 하면 됩니다.
+  ```bash
+     sudo apt install ros-noetic-grid-map-rviz-plugin -y
+    ```
+- [kindr](http://github.com/anybotics/kindr) (kinematics and dynamics library for robotics)
+- [kindr_ros](https://github.com/anybotics/kindr_ros) (ROS wrapper for kindr)
+- [Point Cloud Library (PCL)](http://pointclouds.org/) (point cloud processing)
 - [Eigen](http://eigen.tuxfamily.org) (linear algebra library)
 - [Message Logger](https://github.com/ANYbotics/message_logger) (An Interface for Message Logging)
 - [ANY Node](https://github.com/ANYbotics/any_node) (Set of wrapper packages to handle multi-threaded ROS nodes)
+- [rtabmap](https://github.com/introlab/rtabmap/tree/master) (시각적인 정보를 이용해서 카메라의 회전과 이동을 추정하는 오픈소스 라이브러리)
+
+참고로 rtabmap의 경우 아래와 같이 해도 됩니다
+    ```bash
+    sudo apt update
+    sudo apt install ros-noetic-rtabmap-ros
+    source /opt/ros/noetic/setup.bash
+    source ~/(workspace이름)/devel/setup.bash
+    ```
+
 - [그 외] 터미널에 rosdep install --from-paths src --ignore-src -r -s 명령어를 쳐가며 의존성을 설치하는 것을 권장합니다
 
 위의 의존성 파일들을 모두 완료하면 위의 rosdep install --from-paths src --ignore-src -r -s 명령어를 쳤을 때 아무것도 출력되지 않습니다. 그러면 그 후
