@@ -104,12 +104,12 @@ deactivate pose data, allowing the node to be launched with the camera motionles
 연산량이 많아 상당히 느리게 map이 업데이트 되며 이것을 개선중에 있습니다.
 
 
+## 현재 TF 관련해서 문제가 있어 수정중에 있습니다
 
 ## License
 [MIT License](LICENSE)
 
-## 참고 및 도움
-https://github.com/SobhanGhayedzadeh/elevation-mapping-realsense-d435i/blob/main/README.md
+
 
 ## 제 메일
 christy201@daum.net
